@@ -24,5 +24,5 @@ or
 rasa run --enable-api --port 5005
 
 and 
-postman tool - ocalhost:5005/model/parse
+postman tool - localhost:5005/model/parse
 
