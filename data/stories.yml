@@ -34,15 +34,6 @@ stories:
   - intent: thanks
   - action: utter_thanks
 
-- story: User asks for weather in a specific city
-  steps:
-  - intent: ask_weather
-  - action: utter_ask_weather
-  - intent: get_weather
-  - entities:
-    - city: London
-  - action: action_get_weather
-
 - story: User asks for Immigration
   steps:
   - intent: ask_immigration_questions

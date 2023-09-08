@@ -5,6 +5,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import json
+import re
 
 app = FastAPI()
 
@@ -29,7 +30,7 @@ def get_top(searchQuery, k=1):
     for id_ in top_k_ids:
         row = df.iloc[id_]
 
-        responses = " ".join([row['Content'].strip(), row['Source'].strip()])
+        responses = " ".join([row['Content'], row['Source']])
 
     return responses
 
@@ -55,7 +56,8 @@ def get_top_k_matches(searchQuery, k=1):
 @app.get("/api/v1/qa", summary="Question Answers", description="Returns Answer.")
 async def qa(prompt):
     result = get_top(prompt)
-    response = result
+    result2 = re.sub(r'\n', ' ', result)
+    response = re.sub(r'\r', ' ', result2)
     return response
 
 if __name__ == '__main__':

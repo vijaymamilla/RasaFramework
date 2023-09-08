@@ -9,8 +9,6 @@ intents:
   - mood_unhappy
   - bot_challenge
   - thanks
-  - ask_weather
-  - get_weather
   - ask_immigration_questions
 
 entities:
@@ -39,11 +37,7 @@ responses:
   utter_thanks:
   - text: "You are welcome, it is my pleasure to assist to you"
 
-  utter_ask_weather:
-  - text: "Sure, can you specify the city"
-
 actions:
-  - action_get_weather
   - action_immigration_questions
 
 session_config:

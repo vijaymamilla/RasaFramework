@@ -7,11 +7,13 @@ Step 1-
 
 pip3 install 'rasa[full]'
 
-pip install flask
-
 pip install gunicorn flask
 
 pip install "fastapi[all]"
+
+pip install sentence-transformers
+
+pip install pandas
 
 Step 2 - rasa init  (RASA project will create)  --- not required this step
 
@@ -24,10 +26,6 @@ Step 4 - To run Action server to connect to backend
 rasa run actions
 
 Step 5 - To test the application
-
-Rasa run shell
-
-or
 
 rasa run --enable-api --port 5005
 
