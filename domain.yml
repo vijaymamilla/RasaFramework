@@ -11,6 +11,8 @@ intents:
   - thanks
   - ask_weather
   - get_weather
+  - ask_immigration_questions
+
 entities:
   - city
 
@@ -38,10 +40,11 @@ responses:
   - text: "You are welcome, it is my pleasure to assist to you"
 
   utter_ask_weather:
-    - text: "Sure, can you specify the city"
+  - text: "Sure, can you specify the city"
 
 actions:
   - action_get_weather
+  - action_immigration_questions
 
 session_config:
   session_expiration_time: 60

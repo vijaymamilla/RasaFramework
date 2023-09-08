@@ -42,3 +42,8 @@ stories:
   - entities:
     - city: London
   - action: action_get_weather
+
+- story: User asks for Immigration
+  steps:
+  - intent: ask_immigration_questions
+  - action: action_immigration_questions

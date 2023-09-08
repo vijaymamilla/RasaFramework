@@ -109,3 +109,9 @@ nlu:
     - [London](city)
     - [Berlin](city)
     - [New York](city)
+
+- intent: ask_immigration_questions
+  examples: |
+    - How do I immigrate to canada
+    - Can you tell me about the immigrate
+    - Tell me the immigrate

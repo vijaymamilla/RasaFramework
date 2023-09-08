@@ -1,0 +1,5 @@
+pip3 install 'rasa[full]'
+pip install gunicorn flask
+pip install "fastapi[all]"
+sentence-transformers
+pandas
